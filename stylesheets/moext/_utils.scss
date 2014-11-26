@@ -1,0 +1,101 @@
+/**
+ * Utility Classes
+ */
+%no-space {
+  margin: 0;
+  padding: 0;
+}
+
+#{map-get($layout, block)} {
+  display: block;
+}
+
+#{map-get($layout, clear-left)} {
+  clear: left;
+}
+
+#{map-get($layout, clear-right)} {
+  clear: right;
+}
+
+#{map-get($layout, clear)} {
+  clear: both;
+}
+
+#{map-get($layout, float-left)} {
+  float: left;
+}
+
+#{map-get($layout, float-right)} {
+  float: right;
+}
+
+#{map-get($layout, float-none)} {
+  float: none;
+}
+
+%#{map-get($layout, hide)} {
+  display: none;
+  visibility: hidden;
+}
+
+#{"." + map-get($layout, hide)} {
+  @extend %#{map-get($layout, hide)};
+}
+
+#{"." + map-get($layout, inline)} {
+  display: inline;
+}
+
+#{"." + map-get($layout, inline-block)} {
+  display: inline-block;
+}
+
+%#{map-get($layout, list-flat)} {
+  list-style: none;
+}
+
+#{"." + map-get($layout, list-flat)} {
+  @extend %#{map-get($layout, list-flat)};
+  @extend %no-space;
+}
+
+%#{map-get($layout, clear-fix)} {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+#{"." + map-get($layout, clear-fix)}:after {
+  @extend %#{map-get($layout, clear-fix)};
+}
+
+%#{map-get($message, error)} {
+  border: 1px solid $color-text-error;
+  background: $color-bg-error;
+  color: $color-error;
+  padding: $dims-box-spacing;
+}
+
+#{"." + map-get($message, error)} {
+  @extend %#{map-get($message, error)};
+}
+
+%#{map-get($layout, container)} {
+  text-align: center;
+}
+
+#{"." + map-get($layout, container)} {
+  @extend %#{map-get($layout, container)};
+}
+
+%#{map-get($layout, content)} {
+  margin: 0 auto;
+  text-align: left;
+}
+
+#{"." + map-get($layout, content)} {
+  @extend %#{map-get($layout, content)};
+}

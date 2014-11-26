@@ -1,0 +1,11 @@
+@for $i from 1 through map-get($grid, columns) {
+  .#{$app-ns + map-get($grid, ns)}-#{$i} {
+    width: to_percent(colwidth($i, 0), map-get($breakpoints, large) - (map-get($grid, outer-margin) * 2));
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, small) {
+  [class *= "#{$app-ns + map-get($grid, ns)}-"] {
+    width: 100%;
+  }
+}
