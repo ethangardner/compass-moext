@@ -1,4 +1,4 @@
-description "momentum compass extension"
+description "Momentum Compass Extension"
 
 # Make sure you list all the project template files here in the manifest.
-stylesheet 'screen.scss', :media => 'screen, projection'
+stylesheet 'all.scss', :media => 'all'

@@ -4,7 +4,7 @@
   }
 }
 
-@media screen and (max-width: map-get($breakpoints, small) {
+@media screen and (max-width: map-get($breakpoints, small)) {
   [class *= "#{$app-ns + map-get($grid, ns)}-"] {
     width: 100%;
   }

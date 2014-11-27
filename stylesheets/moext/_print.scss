@@ -5,7 +5,7 @@
   body {
     background: white !important;
     color: black !important;
-    font: 10pt / 1.5 $content-font;
+    font: 10pt / 1.5 "Times New Roman", Times, serif;
     margin: 0;
     padding: 0;
   }
@@ -52,9 +52,5 @@
   a[href]:after {
     content: " (" attr(href) ") ";
     font-size: 90%;
-  }
-  #{"." + $layout-hide} {
-    display: none;
-    visibility: hidden !important;
   }
 }

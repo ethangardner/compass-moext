@@ -1,15 +1,15 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "3.0"
+  s.version = "3.0.0"
   s.date = "2014-10-28"
 
   # Gem Details
-  s.name = "moext"
+  s.name = "compass-moext"
   s.authors = ["Ethan Gardner"]
   s.summary = %q{a lightweight starter file for SASS/Compass}
-  s.description = %q{a lightweight starter file for SASS/Compass}
+  s.description = %q{Provides basic grid functions and structure for variable reuse}
   s.email = "edgincvg@gmail.com"
-  s.homepage = "https://github.com/ethangardner/moext"
+  s.homepage = "https://github.com/ethangardner/compass-moext"
 
   # Gem Files
   s.files = %w(README.md)
