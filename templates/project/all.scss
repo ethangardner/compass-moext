@@ -1,5 +1,17 @@
-@import 'compass/css3';
-@import 'moext/base';
-@import 'moext/utils';
-@import 'moext/grid';
-@import 'moext/print';
+// Import base settings
+@import "base";
+
+// Scope the reset to the application namespace
+##{$app-ns} {
+  @import "reset";
+}
+
+// Provide access to Compass and Momentum features
+@import "compass";
+@import "compass/css3";
+@import "moext";
+
+##{$app-ns} {
+  @import 'styles';
+  @import 'moext/print'
+}
