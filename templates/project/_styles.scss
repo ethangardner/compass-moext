@@ -1,59 +1,58 @@
 h1 {
-  font: #{em(35px)}/1.1429 map-get($fonts, heading);
+  font: 35px/1.1429 map-get($fonts, heading);
 }
 
 h2 {
-  font: #{em(30px)}/1.16667 map-get($fonts, heading);
+  font: 30px/1.16667 map-get($fonts, heading);
 }
 
 h3 {
-  font: #{em(25px)}/1.2 map-get($fonts, heading);
+  font: 25px/1.2 map-get($fonts, heading);
 }
 
 h4 {
-  font: #{em(20px)}/1.25 map-get($fonts, heading);
+  font: 20px/1.25 map-get($fonts, heading);
 }
 
 h5 {
-  font: #{em(18px)}/1.3889 map-get($fonts, heading);
+  font: 18px/1.3889 map-get($fonts, heading);
 }
 
 h6 {
-  font: #{em(16px)}/1.125 map-get($fonts, heading);
+  font: 16px/1.125 map-get($fonts, heading);
 }
 
 ul, ol, dl, p {
-  font-size: 1em;
+  font-size: map-get($fonts, size);
   line-height: map-get($fonts, line-height);
   margin-top: 0;
   margin-bottom: 1.5em;
 }
 
 dd, dt, li, label {
-  @include default-font;
+  font-size: map-get($fonts, size);
+  line-height: map-get($fonts, line-height);
 }
 
 a {
-  color: $link-color;
+  color: map-get($colors, link);
   text-decoration: none;
   &:hover {
-    color: $link-hover-color;
+    color: map-get($colors, link-hover);
     text-decoration: underline;
   }
   &:visited {
-    color: $link-visited-color;
-  }
-  &:focus {
-    @include text-shadow;
+    color: map-get($colors, link-visited);
   }
 }
 
 address, div {
-  @include default-font;
+  font-size: map-get($fonts, size);
+  line-height: map-get($fonts, line-height);
 }
 
 abbr {
-  border-bottom: 1px dotted $muted-color-1;
+  border-bottom: 1px dotted map-get($colors, neutral-1);
   cursor: help;
   letter-spacing: 1px;
 }
@@ -81,55 +80,51 @@ sub {
 }
 
 code, pre {
-  font-family: $code-font;
-  font-size: $base-font-size;
+  font-family: map-get($fonts, code);
+  font-size: map-get($fonts, size);
 }
 
 blockquote {
-  background: $muted-color-2;
-  border-left: 3px solid $muted-color-1;
-  padding: $padding;
+  background: map-get($colors, muted-2);
+  border-left: 3px solid map-get($colors, muted-1);
+  padding: map-get($dimensions, box-spacing);
 }
 
 /**
  * Table
  */
 table {
-  @include default-font;
+  font-size: map-get($fonts, size);
+  line-height: map-get($fonts, line-height);
   margin-bottom: 1.5em;
   width: 100%;
 }
 
 tr {
-  border-bottom: 1px solid $muted-color-1;
+  border-bottom: 1px solid map-get($colors, muted-1);
 }
 
 td, th {
-  padding: $padding;
+  padding: map-get($dimensions, box-spacing);
   vertical-align: top;
 }
 
 caption {
   font-weight: 700;
-  padding: $padding * 2 $padding;
+  padding: map-get($dimensions, box-spacing);
   text-align: center;
 }
 
 thead th {
-  @include default-gradient;
-  border-bottom: 3px solid $accent-color-1;
+  border-bottom: 3px solid map-get($colors, accent-1);
 }
 
 tbody {
   th {
-    background: $muted-color-1;
-    border: {
-      left: 1px solid #fff;
-      top: 1px solid #fff;
-    };
+    background: map-get($colors, muted-1);
   }
   tr:nth-child(odd) {
-    background: $muted-color-2;
+    background: map-get($colors, muted-2);
   }
 }
 
@@ -154,29 +149,26 @@ ul {
  * Forms
  */
 form {
-  padding: $padding 0;
+  padding: map-get($dimensions, box-spacing) 0;
 }
 
 fieldset {
-  border: 1px solid $muted-color-1;
-  padding: $padding;
-  margin-bottom: $base-font-size;
+  border: 1px solid map-get($colors, muted-1);
+  padding: map-get($dimensions, box-spacing);
+  margin-bottom: map-get($fonts, size);
 }
 
 legend {
-  font-size: $base-font-size;
-  padding: $padding;
+  font-size: map-get($fonts, size);
+  padding: map-get($dimensions, box-spacing);
 }
 
 button, .btn, a.btn, input[type="submit"], input[type="reset"] {
-  background: $base-bg-1;
-  @include analyze-bg-color;
-  border: 1px solid $muted-color-1;
   cursor: pointer;
-  font-size: em(14px);
-  font-family: $content-font;
-  padding: $padding * 2;
+  font-size: map-get($fonts, size);
+  font-family: map-get($fonts, content);
+  padding: map-get($dimensions, box-spacing);
   &:hover {
-    @include box-shadow(#000 0 0 10px inset);
+    text-decoration: none;
   }
 }
