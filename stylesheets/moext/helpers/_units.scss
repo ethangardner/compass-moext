@@ -1,11 +1,11 @@
 //: Functions
-// Canvas - ((Total Units -1) x Gutter) ÷ Total Units
+// Canvas - ((Total Units -1) x Gutter) ├╖ Total Units
 @function colwidth($num, $padding: 0) {
-  @if ( $num <= map-get($grid, columns) ){
-    $canvas: map-get($breakpoints, large) - (map-get($grid, 'outer-margin') * 2);
+  @if $num <= map-get($grid, columns) {
+    $canvas: map-get($breakpoints, large) - map-get($grid, "outer-margin") * 2;
     $total-units: map-get($grid, columns);
     $gutter: map-get($grid, column-gutter);
-    @return ( $canvas - ( ($total-units - 1) * $gutter ) ) / $total-units * $num + (($num - 1) * $gutter) - ($padding * 2);
+    @return ($canvas - ($total-units - 1) * $gutter) / $total-units * $num + ($num - 1) * $gutter - $padding * 2;
   }
   @else {
     @return map-get($breakpoints, large);
@@ -13,24 +13,26 @@
 }
 
 @function to_ems($target, $context: $base-font-size) {
-  @return unit_mixin($target, $context, 'em')
+  @return unit_mixin($target, $context, "em");
 }
 
 @function to_percent($target, $context: $base-font-size) {
-  @return unit_mixin($target, $context, 'percent')
+  @return unit_mixin($target, $context, "percent");
 }
 
 // Helper function to calculate units relative to the target (desired) size
 // and the context of the containing element
-@function unit_mixin($target, $context: $base-font-size, $units: 'em') {
+@function unit_mixin($target, $context: $base-font-size, $units: "em") {
   @if $target == 0 {
-    @return 0
-  } @elseif $units == 'percent' {
-      @return percentage($target / $context)
-  } @else {
-      @if (unit($target) == unit($context)) {
-        @return $target / $context + 0#{$units}
-      }
+    @return 0;
+  }
+  @else if $units == "percent" {
+    @return percentage($target / $context);
+  }
+  @else {
+    @if unit($target) == unit($context) {
+      @return $target / $context + 0#{$units};
+    }
   }
 }
 

@@ -9,9 +9,9 @@
 // Provide access to Compass and Momentum features
 @import "compass";
 @import "compass/css3";
-@import "moext";
 
 ##{$app-ns} {
-  @import 'styles';
-  @import 'moext/print'
+  @import "moext";
+  @import "styles";
+  @import "moext/print";
 }

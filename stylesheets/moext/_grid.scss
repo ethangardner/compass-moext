@@ -1,6 +1,6 @@
 @for $i from 1 through map-get($grid, columns) {
   .#{$app-ns-prefix + map-get($grid, ns)}-#{$i} {
-    width: to_percent(colwidth($i, 0), map-get($breakpoints, large) - (map-get($grid, outer-margin) * 2));
+    width: to_percent(colwidth($i, 0), map-get($breakpoints, large) - map-get($grid, outer-margin) * 2);
   }
 }
 
