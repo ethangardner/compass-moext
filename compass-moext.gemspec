@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   # Gem Details
   s.name = "compass-moext"
   s.authors = ["Ethan Gardner"]
-  s.summary = %q{a lightweight starter file for SASS/Compass}
+  s.summary = %q{A micro library for Compass and SASS for building responsibly scoped applications}
   s.description = %q{Provides basic grid functions and structure for variable reuse}
   s.email = "edgincvg@gmail.com"
   s.homepage = "https://github.com/ethangardner/compass-moext"
