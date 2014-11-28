@@ -1,10 +1,42 @@
 $app-ns: "" !default;
+$app-ns-prefix: ns-prefix($app-ns) !default;
+
+//: Typography
+$fonts: (
+  "heading": '"Franklin Gothic Medium", Tahoma, "Helvetica Neue", Arial, sans-serif',
+  "content": 'cambria, georgia, "Times New Roman", Times, serif',
+  "code": 'consolas, "lucida console", "courier new", monospace',
+  "size": 18px,
+  "line-height": 1.3889
+) !default;
+
+$colors: (
+  "bg-main": #fff,
+  "text": #000,
+  "text-reverse": #fff,
+  "link": #00f,
+  "link-hover": #00c,
+  "link-visited": #608,
+  "accent-1": #66f
+) !default;
+
+$colors: map-merge($colors, (
+    "muted-1": lighten(map-get($colors, accent-1), 10%),
+    "neutral-1": lighten(map-get($colors, accent-1), 20%),
+    "darken-1": darken(map-get($colors, accent-1), 10%),
+    "darken-2": darken(map-get($colors, accent-1), 20%)
+  )
+) !default;
+
+$dimensions: (
+  "box-spacing": 10px,
+) !default;
 
 $breakpoints: (
   "large": 970px,
   "medium": 800px,
   "small": 460px
-);
+) !default;
 
 //: Utility class names
 $layout: (
@@ -22,11 +54,11 @@ $layout: (
   "list-flat": "l-none",
   "container": "l-wrapper",
   "content": "l-content"
-);
+) !default;
 
 $grid: (
   "ns": "grid",
   "columns": 12,
   "outer-margin": 10px,
   "column-gutter": 10px
-);
+) !default;

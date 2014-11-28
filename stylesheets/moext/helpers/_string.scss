@@ -1,0 +1,7 @@
+@function ns-prefix( $ns: $ns ){
+  @if str-length($ns) != 0 {
+    @return $ns + "-";
+  } @else {
+    @return "";
+  }
+};

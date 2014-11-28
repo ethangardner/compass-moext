@@ -35,59 +35,59 @@
 
 // END Placeholder classes
 
-.#{$app-ns + map-get($layout, clear-left)} {
+.#{$app-ns-prefix + map-get($layout, clear-left)} {
   clear: left;
 }
 
-.#{$app-ns + map-get($layout, clear-right)} {
+.#{$app-ns-prefix + map-get($layout, clear-right)} {
   clear: right;
 }
 
-.#{$app-ns + map-get($layout, clear)} {
+.#{$app-ns-prefix + map-get($layout, clear)} {
   clear: both;
 }
 
-.#{$app-ns + map-get($layout, float-left)} {
+.#{$app-ns-prefix + map-get($layout, float-left)} {
   float: left;
 }
 
-.#{$app-ns + map-get($layout, float-right)} {
+.#{$app-ns-prefix + map-get($layout, float-right)} {
   float: right;
 }
 
-.#{$app-ns + map-get($layout, float-none)} {
+.#{$app-ns-prefix + map-get($layout, float-none)} {
   float: none;
 }
 
-.#{$app-ns + map-get($layout, hide)} {
+.#{$app-ns-prefix + map-get($layout, hide)} {
   @extend %#{map-get($layout, hide)};
 }
 
-.#{$app-ns + map-get($layout, inline)} {
+.#{$app-ns-prefix + map-get($layout, inline)} {
   display: inline;
 }
 
-.#{$app-ns + map-get($layout, inline-block)} {
+.#{$app-ns-prefix + map-get($layout, inline-block)} {
   display: inline-block;
 }
 
-.#{$app-ns + map-get($layout, block)} {
+.#{$app-ns-prefix + map-get($layout, block)} {
   display: block;
 }
 
-.#{$app-ns + map-get($layout, list-flat)} {
+.#{$app-ns-prefix + map-get($layout, list-flat)} {
   @extend %#{map-get($layout, list-flat)};
   @extend %no-space;
 }
 
-.#{$app-ns + map-get($layout, clear-fix)}:after {
+.#{$app-ns-prefix + map-get($layout, clear-fix)}:after {
   @extend %#{map-get($layout, clear-fix)};
 }
 
-.#{$app-ns + map-get($layout, container)} {
+.#{$app-ns-prefix + map-get($layout, container)} {
   @extend %#{map-get($layout, container)};
 }
 
-.#{$app-ns + map-get($layout, content)} {
+.#{$app-ns-prefix + map-get($layout, content)} {
   @extend %#{map-get($layout, content)};
 }
