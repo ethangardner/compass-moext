@@ -1,0 +1,182 @@
+h1 {
+  font: #{em(35px)}/1.1429 map-get($fonts, heading);
+}
+
+h2 {
+  font: #{em(30px)}/1.16667 map-get($fonts, heading);
+}
+
+h3 {
+  font: #{em(25px)}/1.2 map-get($fonts, heading);
+}
+
+h4 {
+  font: #{em(20px)}/1.25 map-get($fonts, heading);
+}
+
+h5 {
+  font: #{em(18px)}/1.3889 map-get($fonts, heading);
+}
+
+h6 {
+  font: #{em(16px)}/1.125 map-get($fonts, heading);
+}
+
+ul, ol, dl, p {
+  font-size: 1em;
+  line-height: map-get($fonts, line-height);
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+dd, dt, li, label {
+  @include default-font;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+  &:visited {
+    color: $link-visited-color;
+  }
+  &:focus {
+    @include text-shadow;
+  }
+}
+
+address, div {
+  @include default-font;
+}
+
+abbr {
+  border-bottom: 1px dotted $muted-color-1;
+  cursor: help;
+  letter-spacing: 1px;
+}
+
+b, strong, th {
+  font-weight: 700;
+}
+
+i, em {
+  font-style: italic;
+}
+
+sub, sup, small {
+  font-size: .65em;
+}
+
+sup {
+  line-height: 0;
+  vertical-align: super;
+}
+
+sub {
+  line-height: 0;
+  vertical-align: sub;
+}
+
+code, pre {
+  font-family: $code-font;
+  font-size: $base-font-size;
+}
+
+blockquote {
+  background: $muted-color-2;
+  border-left: 3px solid $muted-color-1;
+  padding: $padding;
+}
+
+/**
+ * Table
+ */
+table {
+  @include default-font;
+  margin-bottom: 1.5em;
+  width: 100%;
+}
+
+tr {
+  border-bottom: 1px solid $muted-color-1;
+}
+
+td, th {
+  padding: $padding;
+  vertical-align: top;
+}
+
+caption {
+  font-weight: 700;
+  padding: $padding * 2 $padding;
+  text-align: center;
+}
+
+thead th {
+  @include default-gradient;
+  border-bottom: 3px solid $accent-color-1;
+}
+
+tbody {
+  th {
+    background: $muted-color-1;
+    border: {
+      left: 1px solid #fff;
+      top: 1px solid #fff;
+    };
+  }
+  tr:nth-child(odd) {
+    background: $muted-color-2;
+  }
+}
+
+tfoot td {
+  text-align: center;
+}
+
+/**
+ * Lists 
+ */
+ol {
+  list-style: decimal outside;
+  padding-left: 30px;
+}
+
+ul {
+  list-style: disc outside;
+  padding-left: 30px;
+}
+
+/**
+ * Forms
+ */
+form {
+  padding: $padding 0;
+}
+
+fieldset {
+  border: 1px solid $muted-color-1;
+  padding: $padding;
+  margin-bottom: $base-font-size;
+}
+
+legend {
+  font-size: $base-font-size;
+  padding: $padding;
+}
+
+button, .btn, a.btn, input[type="submit"], input[type="reset"] {
+  background: $base-bg-1;
+  @include analyze-bg-color;
+  border: 1px solid $muted-color-1;
+  cursor: pointer;
+  font-size: em(14px);
+  font-family: $content-font;
+  padding: $padding * 2;
+  &:hover {
+    @include box-shadow(#000 0 0 10px inset);
+  }
+}
