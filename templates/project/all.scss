@@ -1,13 +1,16 @@
 // Import base settings
 @import "base";
 
+##{$app-ns} {
+  @import "reset";
+}
+
 // Provide access to Compass and Momentum features
 @import "compass/css3";
 @import "compass";
+@import "moext";
 
 ##{$app-ns} {
-  @import "reset";
-  @import "moext";
   @import "styles";
   @import "moext/print";
 }
