@@ -1,13 +1,13 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "3.0.0"
+  s.version = "3.0.1"
   s.date = "2014-10-28"
 
   # Gem Details
   s.name = "compass-moext"
   s.authors = ["Ethan Gardner"]
   s.summary = %q{A micro library for Compass and SASS for building responsibly scoped applications}
-  s.description = %q{Provides basic grid functions and structure for variable reuse}
+  s.description = %q{A Compass extension with basic grid functions and utility classes. Perhaps more importantly, it provides conventions for application CSS structure}
   s.email = "edgincvg@gmail.com"
   s.homepage = "https://github.com/ethangardner/compass-moext"
 
@@ -22,4 +22,5 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.8.28}
   s.add_dependency("compass", [">= 1.0.1"])
+  s.add_dependency("sass", [">= 3.3.0"])
 end
