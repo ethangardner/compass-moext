@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "3.0.1"
-  s.date = "2014-10-28"
+  s.version = "3.1.0"
+  s.date = "2015-01-13"
 
   # Gem Details
   s.name = "compass-moext"

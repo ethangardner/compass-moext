@@ -3,9 +3,9 @@ $app-ns-prefix: ns-prefix($app-ns) !default;
 
 //: Typography
 $fonts: (
-  "heading": '"Franklin Gothic Medium", Tahoma, "Helvetica Neue", Arial, sans-serif',
-  "content": 'cambria, georgia, "Times New Roman", Times, serif',
-  "code": 'consolas, "lucida console", "courier new", monospace',
+  "heading": unquote('"Franklin Gothic Medium", Tahoma, "Helvetica Neue", Arial, sans-serif'),
+  "content": unquote('cambria, georgia, "Times New Roman", Times, serif'),
+  "code": unquote('consolas, "lucida console", "courier new", monospace'),
   "size": 18px,
   "line-height": 1.3889
 ) !default;

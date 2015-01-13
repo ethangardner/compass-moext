@@ -1,16 +1,26 @@
-// Import base settings
-@import "base";
-
-##{$app-ns} {
-  @import "reset";
-}
 
 // Provide access to Compass and Momentum features
 @import "compass/css3";
 @import "compass";
-@import "moext";
+
+// Import momentum defaults and helpers
+@import 'moext/helpers/units';
+@import 'moext/helpers/string';
+
+// Define application namespace 
+@import "namespace";
+
+// Override momentum defaults
+@import 'moext/base';
+@import "base";
+
+// finally, import the utilities and grid functions to
+// in the correct order to make use of the user-defined namespaces.
+@import 'moext/utils';
+@import 'moext/grid';
 
 ##{$app-ns} {
+  @import "reset";
   @import "styles";
   @import "moext/print";
 }
